@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Om Mahavong — LDB Bank Application Letter</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Lao:wght@400;500;600;700&family=Noto+Serif+Lao:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --blue:        #1e5a96;
+    --blue-deep:   #15426d;
+    --blue-tint:   #f0f5fa;
+    --blue-line:   #d9e5f0;
+    --ink:         #2a1f25;
+    --muted:       #6f5d65;
+    --hair:        #ece4e8;
+    --paper:       #ffffff;
+    --gold:        #c08a3e;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    font-family: 'Inter', 'Noto Sans Lao', system-ui, sans-serif;
+    background: #ddd4d9;
+    color: var(--ink);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    padding: 32px 16px;
+  }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto;
+    background: var(--paper);
+    display: grid;
+    grid-template-columns: 74mm 1fr;
+    box-shadow: 0 14px 40px rgba(0,0,0,.14);
+    overflow: hidden;
+  }
+
+  .side {
+    background: var(--blue);
+    color: #eef6f0;
+    padding: 0 0 28px;
+    position: relative;
+  }
+  .side::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(120% 60% at 100% 0%, rgba(255,255,255,.10), transparent 60%);
+    pointer-events: none;
+  }
+
+  .id {
+    padding: 30px 24px 22px;
+    border-bottom: 1px solid rgba(255,255,255,.18);
+    text-align: center;
+  }
+  .photo {
+    width: 116px; height: 116px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 50% 18%;
+    border: 3px solid rgba(255,255,255,.85);
+    box-shadow: 0 6px 16px rgba(0,0,0,.22);
+    margin: 0 auto 16px;
+    display: block;
+    background: #f7dfe9;
+  }
+  .id .name-lo {
+    font-family: 'Noto Serif Lao', 'Inter', serif;
+    font-size: 28px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #fff;
+  }
+  .id .name-en {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.78);
+    margin-top: 6px;
+  }
+  .id .role {
+    margin-top: 12px;
+    font-size: 12.5px;
+    color: rgba(255,255,255,.95);
+    border-top: 1px solid rgba(255,255,255,.25);
+    padding-top: 10px;
+  }
+
+  .side-sec { padding: 22px 24px 0; }
+  .side-h {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #fff;
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 14px;
+  }
+  .side-h::after {
+    content: ""; flex: 1; height: 1px;
+    background: rgba(255,255,255,.28);
+  }
+
+  .contact-row {
+    display: flex; gap: 11px; align-items: flex-start;
+    font-size: 13px; color: rgba(255,255,255,.93);
+    margin-bottom: 11px; word-break: break-word;
+  }
+  .contact-row svg { flex: none; margin-top: 2px; opacity: .9; }
+
+  .skill { margin-bottom: 13px; }
+  .skill-name {
+    font-size: 12.5px; color: #fff; margin-bottom: 5px;
+    display: flex; justify-content: space-between;
+  }
+  .skill-name span { color: rgba(255,255,255,.7); font-size: 11px; }
+  .bar { height: 5px; border-radius: 4px; background: rgba(255,255,255,.22); overflow: hidden; }
+  .bar > i { display: block; height: 100%; background: linear-gradient(90deg,#fff, #e6f0f7); border-radius: 4px; }
+
+  .lang { margin-bottom: 12px; }
+  .lang .l-top { display: flex; justify-content: space-between; align-items: baseline; }
+  .lang .l-name { font-size: 13px; color: #fff; font-weight: 600; }
+  .lang .l-tag  { font-size: 10.5px; color: rgba(255,255,255,.72); letter-spacing: .5px; }
+  .dots { margin-top: 5px; display: flex; gap: 5px; }
+  .dots i { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,.28); }
+  .dots i.on { background: #fff; }
+
+  .soft-tags { display: flex; flex-wrap: wrap; gap: 7px; }
+  .soft-tags span {
+    font-size: 11.5px; color: #fff;
+    border: 1px solid rgba(255,255,255,.32);
+    border-radius: 20px; padding: 4px 11px;
+  }
+
+  .main { padding: 34px 34px 30px; }
+
+  .sec { margin-bottom: 24px; }
+  .sec:last-child { margin-bottom: 0; }
+
+  .sec-h {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 16px;
+  }
+  .sec-h .num {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700; font-size: 12px;
+    color: #fff; background: var(--blue);
+    width: 26px; height: 26px; border-radius: 7px;
+    display: flex; align-items: center; justify-content: center;
+    flex: none;
+  }
+  .sec-h h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px; font-weight: 700; letter-spacing: 1.5px;
+    text-transform: uppercase; color: var(--blue-deep);
+  }
+  .sec-h::after {
+    content: ""; flex: 1; height: 1px; background: var(--hair);
+  }
+
+  .objective {
+    background: var(--blue-tint);
+    border: 1px solid var(--blue-line);
+    border-left: 4px solid var(--blue);
+    border-radius: 8px;
+    padding: 15px 18px;
+    font-size: 13.5px;
+    color: #1a2e3f;
+  }
+
+  .timeline { position: relative; padding-left: 22px; }
+  .timeline::before {
+    content: ""; position: absolute; left: 5px; top: 6px; bottom: 6px;
+    width: 2px; background: var(--blue-line);
+  }
+  .item { position: relative; margin-bottom: 20px; }
+  .item:last-child { margin-bottom: 0; }
+  .item::before {
+    content: ""; position: absolute; left: -22px; top: 5px;
+    width: 12px; height: 12px; border-radius: 50%;
+    background: #fff; border: 3px solid var(--blue);
+  }
+  .item .when {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px; font-weight: 600; letter-spacing: .8px;
+    color: var(--blue); background: var(--blue-tint);
+    display: inline-block; padding: 2px 9px; border-radius: 5px;
+    margin-bottom: 6px;
+  }
+  .item .title {
+    font-size: 15px; font-weight: 700; color: var(--ink);
+    line-height: 1.35;
+  }
+  .item .org {
+    font-size: 12.5px; color: var(--muted); margin-bottom: 7px;
+    font-style: italic;
+  }
+  .item ul { list-style: none; }
+  .item li {
+    position: relative; padding-left: 16px; font-size: 13px;
+    color: #3a473f; margin-bottom: 4px;
+  }
+  .item li::before {
+    content: ""; position: absolute; left: 0; top: 8px;
+    width: 5px; height: 5px; border-radius: 50%; background: var(--gold);
+  }
+
+  .edu {
+    display: flex; gap: 16px; align-items: flex-start;
+    border: 1px solid var(--hair); border-radius: 10px;
+    padding: 16px 18px;
+  }
+  .edu .cap {
+    width: 42px; height: 42px; flex: none; border-radius: 9px;
+    background: var(--blue-tint); color: var(--blue);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .edu .deg { font-size: 14.5px; font-weight: 700; color: var(--ink); }
+  .edu .uni { font-size: 13px; color: var(--muted); margin-top: 3px; }
+  .edu .yr {
+    font-family: 'Inter', sans-serif; font-size: 11.5px; font-weight: 600;
+    color: var(--blue); margin-top: 5px;
+  }
+
+  .foot {
+    margin-top: 22px; padding-top: 14px; border-top: 1px solid var(--hair);
+    font-family: 'Inter', sans-serif; font-size: 10.5px; letter-spacing: 1px;
+    color: var(--muted); text-transform: uppercase; text-align: right;
+  }
+
+  @media print {
+    body { background: #fff; padding: 0; }
+    .page { box-shadow: none; width: 100%; min-height: 0; }
+    @page { size: A4; margin: 0; }
+  }
+
+  @media (max-width: 760px) {
+    body { padding: 14px 0; }
+    .page { width: 100%; grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+  <!-- Password Protection -->
+  <div id="passwordModal" style="display: flex; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); justify-content: center; align-items: center; z-index: 9999; backdrop-filter: blur(5px);">
+    <div style="background: white; padding: 40px; border-radius: 12px; text-align: center; box-shadow: 0 10px 40px rgba(0,0,0,0.3); max-width: 400px;">
+      <h2 style="color: #1e5a96; margin-bottom: 20px; font-family: 'Inter', sans-serif;">🔒 Password</h2>
+      <p style="color: #666; margin-bottom: 20px; font-family: 'Inter', sans-serif;">Please enter password to view application</p>
+      <input type="password" id="passwordInput" placeholder="Password" style="width: 100%; padding: 12px; border: 2px solid #1e5a96; border-radius: 6px; font-size: 16px; margin-bottom: 15px; box-sizing: border-box;" />
+      <button onclick="checkPassword()" style="width: 100%; padding: 12px; background: #1e5a96; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 16px; font-weight: bold; font-family: 'Inter', sans-serif;">OK</button>
+      <p id="errorMsg" style="color: red; margin-top: 15px; display: none; font-family: 'Inter', sans-serif;">Incorrect password!</p>
+    </div>
+  </div>
+
+  <script>
+    const CORRECT_PASSWORD = "105466";
+    
+    function checkPassword() {
+      const input = document.getElementById('passwordInput').value;
+      const errorMsg = document.getElementById('errorMsg');
+      
+      if (input === CORRECT_PASSWORD) {
+        document.getElementById('passwordModal').style.display = 'none';
+        document.querySelector('main.page').style.filter = 'blur(0px)';
+        localStorage.setItem('applicationUnlocked', 'true');
+      } else {
+        errorMsg.style.display = 'block';
+        document.getElementById('passwordInput').value = '';
+      }
+    }
+    
+    document.getElementById('passwordInput').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        checkPassword();
+      }
+    });
+    
+    window.addEventListener('load', function() {
+      const mainPage = document.querySelector('main.page');
+      if (localStorage.getItem('applicationUnlocked') === 'true') {
+        document.getElementById('passwordModal').style.display = 'none';
+        mainPage.style.filter = 'blur(0px)';
+      } else {
+        mainPage.style.filter = 'blur(10px)';
+      }
+    });
+  </script>
+
+  <main class="page">
+
+    <!-- ============ SIDEBAR ============ -->
+    <aside class="side">
+      <div class="id">
+        <img class="photo" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAMCAgICAgMCAgIDAwMDBAYEBAQEBAgGBgUGCQgKCgkICQkKDA8MCgsOCwkJDRENDg8QEBEQCgwSExIQEw8QEBD/2wBDAQMDAwQDBAgEBAgQCwkLEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBD/wAARCAJYAlgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9TgR/eJrC8R6rpVpbuLt1LjjG4jFeZ+Dv2jfC3irWp7WGciBivl8528DP65rG/aN8QSaf4WGr6DO0LzqZBNEcFvfn6V308JNStJHjV8fFR0OuXxP8O55xDeQxGUcOfNYHd371IR8MGJb7NB8xz/rn/wDiq+GLXxh4mlMN3Nf3Mkkyh3ctyxPUnirkvj/xMhONQuRjj73/ANavZo5c5q+p4NfNLPQ+1y3ww/59YP8Av+//AMVV/T9K+GuogCC0tyScAefJ/wDFV8L/APCc+Ijz/at1/wB9j/CrOk/EXx3bakqWmvX8SKwOFcY6/Sqq4FwWkmvmFDH+01PtnxP8O/DwtjJYWCRNtOMSOece5rxbXtEvrC+2KSqA8jHavVvhb4n1DxVoZuNXuZLxwCd8pGR+WK5v4kRrFdxtBJtDMNwHcelVg5Tg/Zzd2jsqyjJXRwIVgMN17UhRjwalXLu4Jzjp7UoRs9TXvUpXVjyqqsyEQ5PIpxjIHFWliwue9KIy3BrVowTKihlOTT05PNWPIHpQIAOgFTYpMYig54qRVAzxSiMjpT40xndScblc1gUYFLUiIpB4p2xP7tZ+yY+crlMncKnhViAM07ao6AU9eBxxS5C1JksYwcVNUKnIyetO3N61m6ZXOPQncfrVkdBVZemamBOByaOQXtB9KOtEfPWpNq+lUombkxNi+lGwdhSkE8DrSxqQ6o7Hk4zWFaagUry2JoIi5Ct0PFRzNBbPl5Bgdabqd1HbIIoptkjDAI9a8/v9fubPWo3vr2Se1Xd5kLH5W+U4z+OD+FeDi8by7HTRwk6m6Ow1m90m40+WCUg5IONxHQ57V5lc6olrdEWEuGDdAc8fjXF+OvHmqXF69loN1NbMxyoiPQDr19qreCo/EFzfC41O4mkBRsl/XivAr4+73PbwuT+06Ho2qeIZLSwiuNSctHLII+eOSCe30rJvdO8IX8MV1Fpi+c7fO3nScjH+9jrVvWdGl1mzispv3sccglVG6BgCM/qadpPhtLLf9qhV0KgIG6A5/wAK82riZz2Z9DhcjUbOwzTNN0y0Vzp9qIiwG/Dsc+nUn3qaWBmPA6Vc8u2tc+VEq7uOKglukTjjmue85 [truncated]
+        <div class="name-lo">Om Mahavong</div>
+        <div class="name-en">ອົ້ມ ມະຫາວົງ</div>
+        <div class="role">Application for Bank Officer Position - LDB Bank</div>
+        <div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,.25); font-size: 12px; color: rgba(255,255,255,.95);">DOB: 06/06/1999</div>
+      </div>
+
+      <!-- Contact -->
+      <section class="side-sec">
+        <h3 class="side-h">Contact</h3>
+        <div class="contact-row">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.69 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.56 2.81.69A2 2 0 0 1 22 16.92z"/></svg>
+          <span>+856 20 5799 1449</span>
+        </div>
+        <div class="contact-row">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+          <span>mahavongom@gmail.com</span>
+        </div>
+        <div class="contact-row">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Vientiane, Laos</span>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section class="side-sec">
+        <h3 class="side-h">Skills</h3>
+        <div class="skill">
+          <div class="skill-name">Banking Counter <span>3 Years</span></div>
+          <div class="bar"><i style="width:92%"></i></div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">Cash Management <span>Expert</span></div>
+          <div class="bar"><i style="width:88%"></i></div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">Customer Service <span>Excellent</span></div>
+          <div class="bar"><i style="width:95%"></i></div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">Currency Exchange <span>Advanced</span></div>
+          <div class="bar"><i style="width:82%"></i></div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">Core Banking System <span>Experienced</span></div>
+          <div class="bar"><i style="width:86%"></i></div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">Microsoft Office <span>Advanced</span></div>
+          <div class="bar"><i style="width:85%"></i></div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">Communication <span>Strong</span></div>
+          <div class="bar"><i style="width:90%"></i></div>
+        </div>
+      </section>
+
+      <!-- Languages -->
+      <section class="side-sec">
+        <h3 class="side-h">Languages</h3>
+        <div class="lang">
+          <div class="l-top"><span class="l-name">Lao</span><span class="l-tag">Native</span></div>
+          <div class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div>
+        </div>
+        <div class="lang">
+          <div class="l-top"><span class="l-name">Vietnamese</span><span class="l-tag">Fluent</span></div>
+          <div class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div>
+        </div>
+        <div class="lang">
+          <div class="l-top"><span class="l-name">English</span><span class="l-tag">Intermediate</span></div>
+          <div class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div>
+        </div>
+      </section>
+
+      <!-- Soft skills -->
+      <section class="side-sec">
+        <h3 class="side-h">Strengths</h3>
+        <div class="soft-tags">
+          <span>Detail-oriented</span>
+          <span>Team Player</span>
+          <span>Pressure Handling</span>
+          <span>Bilingual Support</span>
+        </div>
+      </section>
+    </aside>
+
+    <!-- ============ MAIN ============ -->
+    <section class="main">
+
+      <!-- Motivation -->
+      <div class="sec">
+        <div class="sec-h"><span class="num">01</span><h2>Application Motivation</h2></div>
+        <p class="objective">
+          I am highly motivated to join <strong>LDB Bank</strong> as a Bank Officer and contribute my expertise in customer service and banking operations. With over 3 years of experience in banking counter operations, cash management, and customer relations, I am confident that my skills and dedication will add value to your esteemed institution. This position represents an excellent opportunity to apply my professional knowledge while growing with a reputable organization that prioritizes excellence and innovation in banking services.
+        </p>
+      </div>
+
+      <!-- Experience -->
+      <div class="sec">
+        <div class="sec-h"><span class="num">02</span><h2>Work Experience</h2></div>
+        <div class="timeline">
+          <div class="item">
+            <span class="when">09/2021 — Present</span>
+            <div class="title">Customer Service & Banking Teller</div>
+            <div class="org">Vietcombank Lao</div>
+            <ul>
+              <li>Handle customer inquiries and provide banking services across all counter positions.</li>
+              <li>Manage cash transactions, currency exchange, and Core Banking system operations (Vietcombank).</li>
+              <li>Assist with account management, fund transfers, and related banking procedures.</li>
+            </ul>
+          </div>
+          <div class="item">
+            <span class="when">01/2020 — 08/2021</span>
+            <div class="title">Banking Operations Associate</div>
+            <div class="org">Vietcombank Lao</div>
+            <ul>
+              <li>Maintained and organized financial records and banking documentation.</li>
+              <li>Supported various banking operations and administrative functions.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education -->
+      <div class="sec">
+        <div class="sec-h"><span class="num">03</span><h2>Education</h2></div>
+        <div class="edu">
+          <div class="cap">🎓</div>
+          <div>
+            <div class="deg">Bachelor of Finance & Banking</div>
+            <div class="uni">Foreign Trade University, Vietnam</div>
+            <div class="yr">Completed: 07/2023</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">Professional Banking Services</div>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
